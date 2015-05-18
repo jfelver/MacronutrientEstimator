@@ -1,0 +1,43 @@
+doctype
+html.ng-app(lang="en")
+  head
+    title #{title} - My Site
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+    script(src='/scripts/bootstrap.js')
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js")
+    meta(name="viewport" content="")
+
+  nav.navbar.navbar-default
+    div.container-fluid
+      div.navbar-header
+
+
+
+
+  body.container(ng-controller="macroController")
+    div.col-sm-10.col-sm-offset-1
+      div.panel.panel-default
+        div.panel-heading.text-center 
+          h3 This is a panel
+        div.panel-body
+          h3.col-sm-8.col-sm-offset-2.pull-left Purpose
+          p.col-sm-8.col-sm-offset-2.text-center.
+            In the day and age of highly processed foods and copius amounts of temptation, we're kept in the dark about not only 
+            what's in the food we're consuming but also how much of it we're supposed to have in order to maintain a weight that 
+            we would desire. This is where this calculator comes in. By using some personal information you'll be able to get a 
+            better idea of how many calories you'll need every day to accomplish the fitness goals that you most desire, whatever 
+            they may be.
+          div.col-sm-6.col-sm-offset-3.btn-group-vertical(role="group" aria-label="...")
+            div.btn-group(role="group")
+              label 
+              input.form-control(type="text" id="exercise" name="exercise" ng-model="newExercise.Age" placeholder="Age")
+            div.btn-group(role="group")
+              input.form-control(type="text" id="exercise" name="exercise" ng-model="newExercise.Height" placeholder="Height")
+            div.btn-group(role="group")
+              input.form-control(type="text" id="exercise" name="exercise" ng-model="newExercise.Weight" placeholder="Weight")
+            div.btn-group(role="group")
+              input.form-control(type="text" id="exercise" name="exercise" ng-model="newExercise.Gender" placeholder="Gender")
+            div.btn-group(role="group")
+              button.btn.btn-primary(ng-click="calculateTDEE()") Find TDEE
+
+    footer
