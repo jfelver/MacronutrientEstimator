@@ -1,0 +1,12 @@
+5/18
+
+	- set up base for website
+	- set up initial forms for information intake
+
+TODO
+
+	- finish angular integration
+	- figure out which TDEE formula should be used
+	- create output area for TDEE
+	- create another page that uses this informaiton for caloric deficit/surplus
+

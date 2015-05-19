@@ -17,27 +17,41 @@ html.ng-app(lang="en")
   body.container(ng-controller="macroController")
     div.col-sm-10.col-sm-offset-1
       div.panel.panel-default
-        div.panel-heading.text-center 
-          h3 This is a panel
+        div.panel-heading
+          h4 Purpose
         div.panel-body
-          h3.col-sm-8.col-sm-offset-2.pull-left Purpose
-          p.col-sm-8.col-sm-offset-2.text-center.
+          p.col-sm-10.col-sm-offset-1.
             In the day and age of highly processed foods and copius amounts of temptation, we're kept in the dark about not only 
             what's in the food we're consuming but also how much of it we're supposed to have in order to maintain a weight that 
             we would desire. This is where this calculator comes in. By using some personal information you'll be able to get a 
             better idea of how many calories you'll need every day to accomplish the fitness goals that you most desire, whatever 
             they may be.
-          div.col-sm-6.col-sm-offset-3.btn-group-vertical(role="group" aria-label="...")
-            div.btn-group(role="group")
-              label 
-              input.form-control(type="text" id="exercise" name="exercise" ng-model="newExercise.Age" placeholder="Age")
-            div.btn-group(role="group")
-              input.form-control(type="text" id="exercise" name="exercise" ng-model="newExercise.Height" placeholder="Height")
-            div.btn-group(role="group")
-              input.form-control(type="text" id="exercise" name="exercise" ng-model="newExercise.Weight" placeholder="Weight")
-            div.btn-group(role="group")
-              input.form-control(type="text" id="exercise" name="exercise" ng-model="newExercise.Gender" placeholder="Gender")
-            div.btn-group(role="group")
-              button.btn.btn-primary(ng-click="calculateTDEE()") Find TDEE
+    div.col-sm-10.col-sm-offset-1
+      div.panel.panel-default
+        div.panel-heading
+          h4 Personal Info
+        div.panel-body
+          div.col-sm-12
+          form.form-horizontal
+            div.form-group
+              label.col-sm-2.control-label Age
+              div.col-sm-8
+                input.form-control(type="number" placeholder="27" id="age")
+            div.form-group
+              label.col-sm-2.control-label Height
+              div.col-sm-4
+                input.form-control(type="number" placeholder="feet" id="feet")
+              div.col-sm-4
+                input.form-control(type="number" placeholder="inches" id="inches")
+            div.form-group
+              label.col-sm-2.control-label Weight
+              div.col-sm-8
+                input.form-control(type="number" placeholder="in lbs" id="weight")
+            div.form-group
+              label.col-sm-2.control-label Gender
+              div.col-sm-4
+                button.btn.btn-block Male
+              div.col-sm-4
+                button.btn.btn-block Female
 
     footer
